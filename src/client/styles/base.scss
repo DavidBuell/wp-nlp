@@ -1,0 +1,40 @@
+$font-stack: "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+
+$primary-color: #00bcd4;
+
+$button-color: #0b616d;
+
+main {
+    font: 400 14px/1.42857143 $font-stack;
+    font-size: 14px;
+    color: $primary-color;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: $button-color;
+
+    &:hover {
+        background-color: #00bcd4;
+        color: #fff;
+    }
+
+    &:visited {
+        background-color: #00bcd4;
+        color: #fff;
+    }
+}

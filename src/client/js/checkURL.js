@@ -9,4 +9,6 @@ const checkURL = (url) => {
     }
 };
 
+console.log(checkURL("http://www.google.com"));
+
 export default checkURL;
