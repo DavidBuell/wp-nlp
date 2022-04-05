@@ -32,3 +32,6 @@ const formHandler = (e) => {
         alert('Invalid URL');
     }
 };
+
+
+export default formHandler;

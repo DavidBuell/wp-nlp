@@ -8,3 +8,5 @@ const checkURL = (url) => {
         return false;
     }
 };
+
+export default checkURL;
