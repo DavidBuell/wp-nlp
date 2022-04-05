@@ -3,8 +3,8 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
-    //we need a entry point with a relative path to the index.js file in the client folder
-    entry: "./client/index.js",
+    mode: "production",
+    entry: "./src/client/index.js",
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -25,7 +25,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./client/views/index.html",
+            template: "./src/client/views/index.html",
             title: 'Webpack Natural Language Processing',
             filename: 'index.html',
             inject: 'body',
