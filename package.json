@@ -10,9 +10,10 @@
     "dev": "webpack-dev-server --config webpack.dev.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mark J Rawlins",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "webpack": "^5.71.0",
     "webpack-cli": "^4.9.2"

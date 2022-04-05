@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const path = require("path");
 const express = require("express");
 
@@ -9,11 +12,9 @@ app.use(express.static(path.resolve(__dirname, "index.js")));
 console.log("__dirname: ", __dirname);
 
 app.get('/', function (req, res) {
-    res.sendFile('C:\\Users\\mj\\Desktop\\wp-nlp\\dist\\index.html')
+    res.sendFile(path.resolve("src/client/views/index.html"));
 })
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!')
 })
-
-
