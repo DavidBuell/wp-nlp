@@ -1,4 +1,5 @@
-//create a post request to the server
-const formHandler = (console.log("A form handler was created"));
+const apiKey = '775c99ed61b2ca0032e2344a9c1f2810';
+
+const formHandler = (console.log(`API Key is ${apiKey}`));
 
 export default formHandler;
