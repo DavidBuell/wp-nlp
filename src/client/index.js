@@ -10,9 +10,7 @@ import './styles/form.scss';
 
 window.addEventListener('DOMContentLoaded', () => {
     const submit = document.getElementById('submit');
-    submit.addEventListener('click', () => {
-        formHandler();
-    })
-})
+    submit.addEventListener('click', formHandler);
+});
 
 export { formHandler }

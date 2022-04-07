@@ -32,6 +32,13 @@ let data = [];
 //create a route that handles the post request for the new URL that comes from the form
 app.post('/api', (req, res) => {
     console.log("req.body: ", req.body);
+    const data = req.body;
+    //we need to build the url using the base url and the api key
+    const url = baseUrl + apiKey + '&url=' + data.url;
+    res.json({
+        message: "success",
+        url: url
+    })
 });
 
 app.listen(process.env.port || 3000, () => {

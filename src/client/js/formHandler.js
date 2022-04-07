@@ -18,7 +18,8 @@ const post = async (url = '', data = {}) => {
     }
 }
 
-const formHandler = async () => {
+const formHandler = async (evt) => {
+    evt.preventDefault();
     //we need to check if the url is valid and if true send to server
     const url = document.getElementById('userInput').value;
     if (checkURL(url)) {
