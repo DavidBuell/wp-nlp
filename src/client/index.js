@@ -1,6 +1,5 @@
 //we need to import checkURL and formHandler from the client folder
 import formHandler from './js/formHandler.js'
-import html from './views/index.html'
 
 //we need to import our main.scss file
 import './styles/base.scss';
