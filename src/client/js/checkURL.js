@@ -7,4 +7,4 @@ const checkURL = (url) => {
     }
 }
 
-export { checkURL };
+export default checkURL;

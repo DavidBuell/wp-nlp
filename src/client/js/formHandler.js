@@ -1,4 +1,4 @@
-const checkURL = require('../js/checkURL');
+import checkURL from "./checkURL";
 const fetch = require('node-fetch');
 
 const post = async (url = '', data = {}) => {
