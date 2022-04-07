@@ -1,4 +1,5 @@
 import checkURL from "./checkURL";
+const fetch = require('node-fetch');
 
 const post = async (url = '', data = {}) => {
     const response = await fetch(url, {

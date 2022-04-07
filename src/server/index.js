@@ -25,17 +25,24 @@ app.get('/*', (req, res) => {
     res.sendFile(path.resolve("dist", "index.html"));
 })
 
+//we need an empty array to store the data
+let data = [];
+
 //create a route that handles the post request for the new URL that comes from the form
 app.post('/api', async (req, res) => {
     try {
         //get the url from the request body
         const url = req.body.url;
+        console.log(url);
         //build the url to the api using the baseUrl and the apiKey
         const apiUrl = `${baseUrl}${apiKey}&lang=en&mode=general&url=${url}`;
+        console.log(apiUrl);
         //we need to fetch the data from the api
         const data = await fetch(apiUrl);
+        console.log(data);
         //we need to parse the data to json
         const json = await data.json();
+        console.log(json);
         //we need to send the data for confidence, irony, and agreement to the client
         res.send({
             confidence: json.confidence,
