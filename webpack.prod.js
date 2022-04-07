@@ -2,6 +2,8 @@ const path = require("path")
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const Dotenv = require('dotenv-webpack')
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
     mode: "production",
@@ -26,8 +28,13 @@ module.exports = {
 
             {
                 test: /\.scss$/,
-                use: ["style-loader", "css-loader", "fast-sass-loader"]
+                use: [MiniCssExtractPlugin.loader, "css-loader", "fast-sass-loader"]
             }
+        ]
+    },
+    optimization: {
+        minimizer: [
+            new CssMinimizerPlugin({})
         ]
     },
     plugins: [
@@ -37,6 +44,11 @@ module.exports = {
             filename: 'index.html',
             inject: 'body',
         }),
-        new Dotenv()
+        new Dotenv(
+
+        ),
+        new MiniCssExtractPlugin(
+
+        )
     ]
 }

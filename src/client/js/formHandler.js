@@ -34,6 +34,4 @@ const formHandler = async (evt) => {
     }
 }
 
-
-
 export default formHandler;

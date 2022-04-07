@@ -1,44 +1,15 @@
-/* Form Input */
+@use './abstracts.scss'as a;
 
-.userInput {
-    padding: 30px 40px 40px;
+button {
+    color: a.$button-color;
 
-    input {
-        width: 50%;
-        font-family: 'Baloo Paaji 2', cursive;
-        font-size: 15px;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 10px;
-        padding: 12px 10px;
-        box-sizing: border-box;
-        outline: none;
-        border: none;
-        border-radius: 30px;
-        box-shadow: 6px 6px 60px 0 #000;
-        margin-bottom: 20px;
-
+    &:hover {
+        background-color: #00bcd4;
+        color: #fff;
     }
 
-}
-
-
-/* Form Output */
-
-.output {
-    padding: 0 40px 140px;
-
-    h2 {
-        font-size: 20px;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        padding: 10px;
-        border-bottom: 1px dotted #fff;
+    &:visited {
+        background-color: #00bcd4;
+        color: #fff;
     }
-
-    .results {
-        font-style: italic;
-        padding: 0 10px;
-    }
-
 }
