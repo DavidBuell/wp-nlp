@@ -23,7 +23,7 @@ const formHandler = async (evt) => {
     //we need to check if the url is valid and if true send to server
     const url = document.getElementById('userInput').value;
     if (checkURL(url)) {
-        const data = await post('http://localhost:3000/api', { url }).then(data => {
+        post('http://localhost:3000/api', { url }).then(data => {
             console.log(data);
             document.getElementById('confidence').innerHTML = `Confidence: ${data.confidence}`;
             document.getElementById('irony').innerHTML = `Irony: ${data.irony}`;
