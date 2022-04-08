@@ -1,0 +1,15 @@
+@use './abstracts.scss'as a;
+
+button {
+    color: a.$button-color;
+
+    &:hover {
+        background-color: #00bcd4;
+        color: #fff;
+    }
+
+    &:visited {
+        background-color: #00bcd4;
+        color: #fff;
+    }
+}
